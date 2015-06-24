@@ -1,0 +1,5 @@
+C:\Users\nicolas.ouagne\Documents\Visual Studio 2013\Projects\PoECharacterCalculator\PoECharacterCalculator.Core\bin\Debug\PoECharacterCalculator.Core.dll
+C:\Users\nicolas.ouagne\Documents\Visual Studio 2013\Projects\PoECharacterCalculator\PoECharacterCalculator.Core\bin\Debug\PoECharacterCalculator.Core.pdb
+C:\Users\nicolas.ouagne\Documents\Visual Studio 2013\Projects\PoECharacterCalculator\PoECharacterCalculator.Core\obj\Debug\PoECharacterCalculator.Core.csprojResolveAssemblyReference.cache
+C:\Users\nicolas.ouagne\Documents\Visual Studio 2013\Projects\PoECharacterCalculator\PoECharacterCalculator.Core\obj\Debug\PoECharacterCalculator.Core.dll
+C:\Users\nicolas.ouagne\Documents\Visual Studio 2013\Projects\PoECharacterCalculator\PoECharacterCalculator.Core\obj\Debug\PoECharacterCalculator.Core.pdb

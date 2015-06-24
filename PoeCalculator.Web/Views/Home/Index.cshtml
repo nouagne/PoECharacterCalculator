@@ -1,0 +1,83 @@
+﻿@model PoeCalculator.Web.ViewModels.CharacterViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+@section scripts
+{
+    <script src="~/Scripts/Pages/Index/index.js"></script>
+}
+
+<div class="jumbotron">
+
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        @Html.Label("Class :")
+        @using (Html.BeginForm("SelectClass", "Home"))
+        { 
+            @Html.EnumDropDownListFor(model => model.CharacterClass, "-- Select a class --", new { @class = "form-control" })
+        }
+        <hr />
+        <div id="stats">
+            <div class="col-md-12">
+                <div class="form-inline form-horizontal">
+                    @Html.LabelFor(x => x.Character.Strengh, new { @class = "control-label col-md-2", @style = "margin-right:10px" })
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.Character.Strengh, new { @class = "form-control col-md-2" })
+                    </div>
+                </div>
+                <br />
+                <div class="form-inline form-horizontal">
+                    @Html.LabelFor(x => x.Character.Dexterity, new { @class = "control-label col-md-2", @style = "margin-right:10px" })
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.Character.Dexterity, new { @class = "form-control col-md-2" })
+                    </div>
+                </div>
+                <br />
+                <div class="form-inline form-horizontal">
+                    @Html.LabelFor(x => x.Character.Intelligence, new { @class = "control-label col-md-2", @style = "margin-right:10px" })
+                    <div class="form-group">
+                        @Html.TextBoxFor(model => model.Character.Intelligence, new { @class = "form-control col-md-2" })
+                    </div>
+                </div>
+                <br />
+                
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4" id="div-middle">
+        <div class="col-md-12">
+            @Html.Label("Level :")
+            @Html.TextBoxFor(model => model.Character.Level, new { @class = "form-control" })
+            <hr />
+            <div class="form-inline form-horizontal">
+                @Html.LabelFor(x => x.Character.Life, new { @class = "control-label col-md-2" , @style = "margin-right:10px" })
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.Character.Life, new { @class = "form-control col-md-2", @disabled = "true" })
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4" id="div-right">
+        <h1>Tree Bonuses</h1>
+        <hr />
+        <div class="col-md-12">
+            <div class="form-inline form-horizontal">
+                @Html.Label("% Life :", new { @class = "control-label col-md-4", @style = "margin-right:10px" })
+                <div class="form-group">
+                    @Html.TextBox("lifePercentBonus",null, new { @class = "form-control col-md-2" })
+                </div>
+            </div>
+            <br />
+            <div class="form-inline form-horizontal">
+                @Html.Label("+X Life :", new { @class = "control-label col-md-4", @style = "margin-right:10px" })
+                <div class="form-group">
+                    @Html.TextBox("flatLifeBonus", null, new { @class = "form-control col-md-2" })
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
